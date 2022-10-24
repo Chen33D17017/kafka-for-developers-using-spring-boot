@@ -57,7 +57,7 @@ public class LibraryEventProducerUnitTest {
         when(kafkaTemplate.send(isA(ProducerRecord.class))).thenReturn(future);
         //when
 
-        assertThrows(Exception.class, ()->eventProducer.sendLibraryEvent_Approach2(libraryEvent).get());
+        assertThrows(Exception.class, () -> eventProducer.sendLibraryEvent_Approach2(libraryEvent).get());
 
     }
 
